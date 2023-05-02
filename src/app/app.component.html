@@ -1,0 +1,36 @@
+<header>Блог</header>
+<div class="container">
+<main>
+  <h3>Записи</h3>
+  <ol>
+    <app-record *ngFor="let record of records"
+                [id]="record.id"
+                [author]="record.author"
+                [recordTitle]="record.recordTitle"
+                [category]="record.category"
+                [content]="record.content">
+    </app-record>
+  </ol>
+</main>
+
+<aside>
+  <h3>Создать запись</h3>
+  <form>
+    <ol>
+    <li><label for="author">Автор</label></li>
+      <li><input type="text" id="author" name="author" [(ngModel)]="author"></li>
+      <li><label for="title">Заголовок</label></li>
+      <li><input type="text" id="title" name="title" [(ngModel)]="recordTitle"></li>
+      <li><label for="category">Категория</label></li>
+      <li><input type="text" id="category" name="category" [(ngModel)]="category"></li>
+      <li><label for="content">Содержание</label></li>
+      <li><textarea id="content" name="content" rows="10" cols="30" [(ngModel)]="content"></textarea></li>
+      <li><button (click)="createRecord()" type="submit" id="button">Создать</button></li>
+    </ol>
+  </form>
+  <h3>Архив</h3>
+  <app-archive-record *ngFor="let archive of archives"
+                      [archiveTitle]="archive">
+  </app-archive-record>
+</aside>
+</div>

@@ -1,0 +1,11 @@
+<div class="record">
+  <h2>{{recordTitle}}</h2>
+  <p>Категория: <strong>{{category}}</strong></p>
+  <p>Автор: <strong>{{author}}</strong></p>
+  <p>{{content}}</p>
+
+    <form>
+      <button (click)="deleteRecord(this.id)" type="submit" id="deleteButton"><p>Удалить</p></button>
+      <button (click)="fromRecordToArchive(this.id)" type="submit" id="archiveButton"><p>Архив</p></button>
+    </form>
+</div>

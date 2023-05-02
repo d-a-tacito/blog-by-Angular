@@ -1,0 +1,28 @@
+h2{
+  margin: 0;
+}
+p{
+  line-height: 1.5;
+  margin: 5px;
+}
+form{
+  text-align: right;
+}
+#deleteButton, #archiveButton{
+  margin-right: 15px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+#deleteButton>p, #archiveButton>p{
+  padding: 5px;
+  margin: 0;
+}
+#deleteButton{
+  background-color: red;
+}
+#archiveButton{
+  background-color: gray;
+}
